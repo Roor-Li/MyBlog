@@ -18,7 +18,7 @@ export default defineUserConfig({
 
   theme: plumeTheme({
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
-    // hostname: 'https://your_site_url',
+    hostname: 'https://roorli.netlify.app/',
 
     /* 文档仓库配置，用于 editLink */
     // docsRepo: '',
@@ -47,6 +47,8 @@ export default defineUserConfig({
 
     /* 博客文章页面链接前缀 */
     article: '/article/',
+
+    copyright: 'CC-BY-4.0',
 
     /**
      * 编译缓存，加快编译速度
