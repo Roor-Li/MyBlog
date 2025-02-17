@@ -6,8 +6,14 @@ const demoNote = defineNoteConfig({
   sidebar: ['', 'foo', 'bar'],
 })
 
+const gitNote = defineNoteConfig({
+  dir: 'git',
+  link: '/git',
+  sidebar: 'auto',
+})
+
 export const notes = defineNotesConfig({
   dir: 'notes',
   link: '/',
-  notes: [demoNote],
+  notes: [demoNote, gitNote],
 })

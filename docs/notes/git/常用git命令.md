@@ -1,9 +1,7 @@
 ---
 title: 常用git命令
-tags:
-  - git
 createTime: 2025/02/14 14:51:09
-permalink: /article/5cly31x1/
+permalink: /git/7xullr8y/
 ---
 ### 添加远程仓库
 ```sh

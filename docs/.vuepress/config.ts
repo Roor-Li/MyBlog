@@ -1,7 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
-
+import { notes } from './notes'
 export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
@@ -50,6 +50,8 @@ export default defineUserConfig({
 
     copyright: 'CC-BY-4.0',
 
+    notes,
+
     /**
      * 编译缓存，加快编译速度
      * @see https://theme-plume.vuejs.press/config/basic/#cache
@@ -80,18 +82,18 @@ export default defineUserConfig({
       },
 
       /* 本地搜索, 默认启用 */
-      // search: true,
+      search: false,
 
       /**
        * Algolia DocSearch
        * 启用此搜索需要将 本地搜索 search 设置为 false
        * @see https://theme-plume.vuejs.press/config/plugins/search/#algolia-docsearch
        */
-      // docsearch: {
-      //   appId: '',
-      //   apiKey: '',
-      //   indexName: '',
-      // },
+      docsearch: {
+        appId: 'XTBKG16FG7',
+        apiKey: 'e7796cf61f40081ddd19637ea64073d1',
+        indexName: 'roorli',
+      },
 
       /* 文章字数统计、阅读时间，设置为 false 则禁用 */
       // readingTime: true,
