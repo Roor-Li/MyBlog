@@ -5,7 +5,7 @@ tags:
 createTime: 2025/02/14 21:31:11
 permalink: /article/2897qxjg/
 ---
-### 题面
+## 题面
 
 【问题描述】  
 众所周知， 小C是挖煤好手。  
@@ -19,7 +19,7 @@ permalink: /article/2897qxjg/
 
 输出 一个 实数，表示答案，保留2位小数。
 
-### 题解
+## 题解
 
 恩，DP好题，难度不大，但是想法比较好。
 
@@ -31,7 +31,7 @@ permalink: /article/2897qxjg/
 
 DP题还是多写点好。
 
-    
+
 ```c++
     #include<iostream>
     #include<algorithm>

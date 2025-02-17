@@ -5,7 +5,7 @@ tags:
 createTime: 2025/02/14 21:31:08
 permalink: /article/u9v2puul/
 ---
-### 题面
+## 题面
 
 【题目描述】
 
@@ -31,7 +31,7 @@ permalink: /article/u9v2puul/
 
 $k<n<=1000$
 
-### 题解
+## 题解
 
 计数类问题，应该是个 **式子** 或者 **DP** 。
 
@@ -45,7 +45,7 @@ $f[i-1][j-1]*(i-j)$表示将$i$插入后数对变多了，也是因为$i$大于$
 
 初值为$f[i][0]=1$，可以用打表和DP式子来判断。
 
-    
+
 ```c++
     #include<iostream>
     #include<cstdio>

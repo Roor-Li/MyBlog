@@ -15,5 +15,5 @@ const gitNote = defineNoteConfig({
 export const notes = defineNotesConfig({
   dir: 'notes',
   link: '/',
-  notes: [demoNote, gitNote],
+  notes: [demoNote, gitNote]
 })
