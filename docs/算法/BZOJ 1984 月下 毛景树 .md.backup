@@ -1,0 +1,212 @@
+---
+title: BZOJ 1984 月下“毛景树”
+creatTime: 2018/08/10 21:43:00
+createTime: 2025/02/14 21:06:02
+permalink: /article/173ckc1w/
+---
+### 题面
+ **题目描述** 
+ 
+毛毛虫经过及时的变形，最终逃过的一劫，离开了菜妈的菜园。 毛毛虫经过千山万水，历尽千辛万苦，最后来到了小小的绍兴一中的校园里。爬啊爬~爬啊爬~毛毛虫爬到了一颗小小的“毛景树”下面，发现树上长着他最爱吃的毛毛果~~ “毛景树”上有N个节点和N-1条树枝，但节点上是没有毛毛果的，毛毛果都是长在树枝上的。但是这棵“毛景树”有着神奇的魔力，他能改变树枝上毛毛果的个数：
+
+* Change k w：将第k条树枝上毛毛果的个数改变为w个。
+* Cover u v w：将节点u与节点v之间的树枝上毛毛果的个数都改变为w个。
+* Add u v w：将节点u与节点v之间的树枝上毛毛果的个数都增加w个。
+
+由于毛毛虫很贪，于是他会有如下询问：
+* Max u v：询问节点u与节点v之间树枝上毛毛果个数最多有多少个。
+
+**输入** 第一行一个正整数N。 接下来N-1行，每行三个正整数Ui，Vi和Wi，第i+1行描述第i条树枝。表示第i条树枝连接节点Ui和节点Vi，树枝上有Wi个毛毛果。 接下来是操作和询问，以“Stop”结束。 
+
+**输出** 对于毛毛虫的每个询问操作，输出一个答案。
+
+**样例输入** 
+
+4 
+1 2 8  
+1 3 7  
+3 4 9  
+Max 2 4  
+Cover 2 4 5  
+Add 1 4 10  
+Change 1 16  
+Max 2 4  
+Stop
+
+**样例输出** 
+
+9  
+16 
+
+**提示** n<=100000
+
+### 题解
+
+这是一道树剖维护边权裸题。和一般的树剖差不多，我们只要将边权放在深度较大的点上，再跑一般的树剖即可。 **但是这里有一个很重要的细节：** 对于查询（或修改）树上两点之间的路径上的边权时，不能考虑到他们的LCA。因为它们的LCA存的是他到他的父亲的边的权值，而这一条边实际上并不在这两点的路径上。（详细请参考代码注释） 
+```c++ 
+#include<iostream>
+#include<cstdio>
+#include<algorithm>
+#include<cstring>
+#define N 100005
+#define inf 1000000009
+using namespace std;
+int hd[N],nx[N<<1],to[N<<1],w[N<<1],cnt,u,v,c;
+int n,val[N],edge[N],tr[N<<2],isp[N<<2],laz[N<<2];
+int fa[N],dep[N],siz[N],son[N],did[N],tot,tid[N],top[N];
+inline void add() {
+	to[++cnt]=v;
+	w[cnt]=c;
+	nx[cnt]=hd[u];
+	hd[u]=cnt;
+	to[++cnt]=u;
+	w[cnt]=c;
+	nx[cnt]=hd[v];
+	hd[v]=cnt;
+}
+inline void dfs1(int x,int f,int d) {
+	fa[x]=f;
+	dep[x]=d;
+	siz[x]=1;
+	for (int i=hd[x];i;i=nx[i]) {
+		int t=to[i];
+		if(t!=fa[x]) {
+			dfs1(t,x,d+1);
+			val[t]=w[i];
+			edge[i+1>>1]=t;
+			siz[x]+=siz[t];
+			if(son[x]<0||siz[t]>siz[son[x]]) son[x]=t;
+		}
+	}
+}
+inline void dfs2(int x,int s) {
+	top[x]=s;
+	did[x]=++tot;
+	tid[tot]=x;
+	if(son[x]<0) return;
+	dfs2(son[x],s);
+	for (int i=hd[x];i;i=nx[i]) {
+		int t=to[i];
+		if(t!=son[x]&&t!=fa[x]) dfs2(t,t);
+	}
+}
+inline void pushdown(int id) {
+	if(isp[id]) {
+		isp[id<<1]=isp[id<<1|1]=isp[id];
+		tr[id<<1]=tr[id<<1|1]=isp[id];
+		laz[id<<1]=laz[id<<1|1]=isp[id]=0;
+	}
+	if(laz[id]) {
+		laz[id<<1]+=laz[id];
+		laz[id<<1|1]+=laz[id];
+		tr[id<<1]+=laz[id];
+		tr[id<<1|1]+=laz[id];
+		laz[id]=0;
+	}
+}
+inline void update(int id) {
+	tr[id]=max(tr[id<<1],tr[id<<1|1]);
+}
+inline void build(int id,int l,int r) {
+	if(l==r) {
+		tr[id]=val[tid[l]];
+		return;
+	}
+	int mid=l+r>>1;
+	build(id<<1,l,mid);
+	build(id<<1|1,mid+1,r);
+	update(id);
+}
+inline void interpi(int id,int l,int r,int ll,int rr,int v) {
+	if(ll>rr) return;
+	if(ll<=l&&rr>=r) {
+		tr[id]=v;
+		isp[id]=v;
+		laz[id]=0;
+		return;
+	}
+	pushdown(id);
+	int mid=l+r>>1;
+	if(ll<=mid) interpi(id<<1,l,mid,ll,rr,v);
+	if(rr>mid) interpi(id<<1|1,mid+1,r,ll,rr,v);
+	update(id);
+}
+inline void interadd(int id,int l,int r,int ll,int rr,int v) {
+	if(ll>rr) return;
+	if(ll<=l&&rr>=r) {
+		tr[id]+=v;
+		laz[id]+=v;
+		return;
+	}
+	pushdown(id);
+	int mid=l+r>>1;
+	if(ll<=mid) interadd(id<<1,l,mid,ll,rr,v);
+	if(rr>mid) interadd(id<<1|1,mid+1,r,ll,rr,v);
+	update(id);
+}
+inline int query(int id,int l,int r,int ll,int rr) {
+	if(ll>rr) return -inf;
+	if(ll<=l&&rr>=r) return tr[id];
+	pushdown(id);
+	int mid=l+r>>1,ans=-inf;
+	if(ll<=mid) ans=max(ans,query(id<<1,l,mid,ll,rr));
+	if(rr>mid) ans=max(ans,query(id<<1|1,mid+1,r,ll,rr));
+	return ans;
+}
+inline void ipi(int x,int y,int v) {
+	while(top[x]!=top[y]) {
+		if(dep[top[x]]<dep[top[y]]) swap(x,y);
+		interpi(1,1,n,did[top[x]],did[x],v);
+		x=fa[top[x]];
+	}
+	if(did[x]>did[y]) swap(x,y);
+	interpi(1,1,n,did[x]+1,did[y],v);
+	//这里的did[x]+1就是为了不算上LCA，下面同理
+}
+inline void iadd(int x,int y,int v) {
+	while(top[x]!=top[y]) {
+		if(dep[top[x]]<dep[top[y]]) swap(x,y);
+		interadd(1,1,n,did[top[x]],did[x],v);
+		x=fa[top[x]];
+	}
+	if(did[x]>did[y]) swap(x,y);
+	interadd(1,1,n,did[x]+1,did[y],v);
+}
+inline int q(int x,int y) {
+	int ans=-inf;
+	while(top[x]!=top[y]) {
+		if(dep[top[x]]<dep[top[y]]) swap(x,y);
+		ans=max(ans,query(1,1,n,did[top[x]],did[x]));
+		x=fa[top[x]];
+	}
+	if(did[x]>did[y]) swap(x,y);
+	ans=max(ans,query(1,1,n,did[x]+1,did[y]));
+	return ans;
+}
+int main() {
+	memset(son,-1,sizeof son);
+	scanf("%d",&n);
+	for (int i=1;i<n;i++) {
+		scanf("%d%d%d",&u,&v,&c);
+		add();
+	}
+	dfs1(1,0,1);
+	dfs2(1,1);
+	build(1,1,n);
+	while(1) {
+		char ch[10];
+		int u,v,w;
+		scanf(" %s",&ch[0]);
+		if(ch[0]=='S') break;
+		scanf("%d%d",&u,&v);
+		if(ch[1]=='h') interpi(1,1,n,did[edge[u]],did[edge[u]],v); else if(ch[1]=='o') {
+			scanf("%d",&w);
+			ipi(u,v,w);
+		} else if(ch[1]=='d') {
+			scanf("%d",&w);
+			iadd(u,v,w);
+		} else printf("%d\n",q(u,v));
+	}
+	return 0;
+}
+```
