@@ -3,7 +3,7 @@ title: 快速傅里叶变换（FFT）随笔 - Roor - 博客园
 tags: 
   - FFT
   - 数学
-createTime: 2025/02/14 21:31:01
+createTime: 2023/02/14 21:31:01
 permalink: /article/whn9m7vm/
 ---
 终于学会了FFT，水一篇随笔记录一下
@@ -18,8 +18,7 @@ permalink: /article/whn9m7vm/
 
 FFT的过程一般为：
 
-多项式的系数表示$\longrightarrow$多项式的点值表示$\longrightarrow$多项式的系数表示 `  
-`
+多项式的系数表示$\longrightarrow$多项式的点值表示$\longrightarrow$多项式的系数表示  
 
 网上对每一步的叫法都有一定出入，这里称第一步变换为快速傅里叶变换，第二步为快速傅里叶逆变换
 

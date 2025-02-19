@@ -2,7 +2,7 @@
 title: BZOJ 3043 [Poetize6] IncDec Sequence - Roor - 博客园
 tags:
   - 差分
-createTime: 2025/02/14 21:31:28
+createTime: 2018/02/14 21:31:28
 permalink: /article/9uasmn3t/
 ---
 ## 题面
@@ -30,20 +30,18 @@ permalink: /article/9uasmn3t/
 
 输入样例:
 
-
-​    
-    4
-    1
-    1
-    2
-    2
+​    4  
+​    1  
+​    1  
+​    2  
+​    2  
 
 输出样例:  
 
 
 ​    
-    1
-    2
+​    1  
+​    2  
 
 **说明**
 

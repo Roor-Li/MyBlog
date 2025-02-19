@@ -9,7 +9,7 @@ const demoNote = defineNoteConfig({
 const gitNote = defineNoteConfig({
   dir: 'git',
   link: '/git',
-  sidebar: 'auto',
+  sidebar: ['', '常用git命令'],
 })
 
 export const notes = defineNotesConfig({

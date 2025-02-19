@@ -2,7 +2,7 @@
 title: DTOJ 4030 排列计数 - Roor - 博客园
 tags:
   - DP
-createTime: 2025/02/14 21:31:08
+createTime: 2018/02/14 21:31:08
 permalink: /article/u9v2puul/
 ---
 ## 题面

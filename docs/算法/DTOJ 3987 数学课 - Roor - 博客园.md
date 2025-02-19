@@ -2,7 +2,7 @@
 title: DTOJ 3987 数学课 - Roor - 博客园
 tags:
   - 卢卡斯定理
-createTime: 2025/02/14 21:31:04
+createTime: 2018/02/14 21:31:04
 permalink: /article/1f115tv3/
 ---
 ## 题面

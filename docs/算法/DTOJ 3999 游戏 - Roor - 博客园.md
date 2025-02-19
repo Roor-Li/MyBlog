@@ -2,7 +2,7 @@
 title: DTOJ 3999 游戏 - Roor - 博客园
 tags:
   - 差分
-createTime: 2025/02/14 21:31:15
+createTime: 2018/02/14 21:31:15
 permalink: /article/fku1o3uy/
 ---
 ## 题面
