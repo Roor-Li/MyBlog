@@ -82,18 +82,18 @@ export default defineUserConfig({
       },
 
       /* 本地搜索, 默认启用 */
-      // search: false,
+      search: false,
 
       /**
        * Algolia DocSearch
        * 启用此搜索需要将 本地搜索 search 设置为 false
        * @see https://theme-plume.vuejs.press/config/plugins/search/#algolia-docsearch
        */
-      // docsearch: {
-      //   appId: 'XTBKG16FG7',
-      //   apiKey: 'e7796cf61f40081ddd19637ea64073d1',
-      //   indexName: 'roorli',
-      // },
+      docsearch: {
+        appId: 'XTBKG16FG7',
+        apiKey: 'e7796cf61f40081ddd19637ea64073d1',
+        indexName: 'roorli',
+      },
 
       /* 文章字数统计、阅读时间，设置为 false 则禁用 */
       // readingTime: true,
