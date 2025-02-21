@@ -1,7 +1,7 @@
 ---
-title: 常用git命令
+title: git
 createTime: 2025/02/14 14:51:09
-permalink: /git/7xullr8y/
+permalink: /memo/7xullr8y/
 ---
 ## 添加远程仓库
 ```sh
@@ -46,3 +46,8 @@ git commit
 git commit -m "修复用户登录验证逻辑"
 ```
 
+## 跟踪
+
+```sh
+# 取消git跟踪
+git rm --cached path/to/filename

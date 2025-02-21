@@ -48,7 +48,7 @@ export default defineUserConfig({
     /* 博客文章页面链接前缀 */
     article: '/article/',
 
-    copyright: 'CC-BY-4.0',
+    // copyright: 'CC-BY-4.0',
 
     notes,
 
