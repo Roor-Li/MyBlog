@@ -15,7 +15,7 @@ const demoNote = defineNoteConfig({
 const memoNote = defineNoteConfig({
   dir: 'memo',
   link: '/memo',
-  sidebar: ['', 'shell', 'git'],
+  sidebar: 'auto',
 })
 
 export const notes = defineNotesConfig({

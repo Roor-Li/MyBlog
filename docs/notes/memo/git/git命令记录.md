@@ -1,5 +1,5 @@
 ---
-title: git
+title: git命令记录
 createTime: 2025/02/14 14:51:09
 permalink: /memo/7xullr8y/
 ---

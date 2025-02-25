@@ -1,5 +1,5 @@
 ---
-title: shell
+title: shell命令记录
 createTime: 2025/02/21 21:38:30
 permalink: /memo/kx4veu9w/
 ---
