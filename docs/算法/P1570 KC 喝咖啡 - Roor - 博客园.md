@@ -2,13 +2,16 @@
 title: P1570 KC 喝咖啡 - Roor - 博客园
 tags:
   - 二分
+excerpt: true
 createTime: 2025/02/14 21:30:58
 permalink: /article/rqgrgszv/
 ---
-不在赘述题目了。
+不再赘述题目了。
 
 这是一道典型的分数规划题目。可以参考一下 https://oi-wiki.org/misc/frac-programming/
 的内容。这里主要讲一下笔者自己在做题时遇到的一些困惑。
+
+<!-- more -->
 
 ##  为什么可以二分
 

@@ -3,12 +3,15 @@ title: 快速傅里叶变换（FFT）随笔 - Roor - 博客园
 tags: 
   - FFT
   - 数学
+excerpt: true
 createTime: 2023/02/14 21:31:01
 permalink: /article/whn9m7vm/
 ---
 终于学会了FFT，水一篇随笔记录一下
 
 前置知识网上一大堆，这里就不多赘述了，直接切入正题
+
+<!-- more -->
 
 ## 01 介绍FFT
 
