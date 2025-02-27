@@ -2,6 +2,7 @@
 title: git
 createTime: 2025/02/24 14:17:28
 permalink: /memo/h1jm1rxr/
+icon: logos:git-icon
 ---
 
  这里用于记录git相关的内容

@@ -8,7 +8,7 @@ permalink: /article/rqgrgszv/
 ---
 不再赘述题目了。
 
-这是一道典型的分数规划题目。可以参考一下 https://oi-wiki.org/misc/frac-programming/
+这是一道典型的分数规划题目。可以参考一下 [这里](https://oi-wiki.org/misc/frac-programming/)
 的内容。这里主要讲一下笔者自己在做题时遇到的一些困惑。
 
 <!-- more -->

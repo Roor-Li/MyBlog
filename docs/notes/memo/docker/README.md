@@ -2,6 +2,7 @@
 title: docker
 createTime: 2025/02/24 14:28:12
 permalink: /memo/zx1psadt/
+icon: logos:docker-icon
 ---
 
  这里记录了docker相关的内容

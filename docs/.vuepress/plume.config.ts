@@ -6,7 +6,7 @@ import { notes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: 'Roor.svg',
+  logo: 'favicon.svg',
 
   appearance: true,  // 配置 深色模式
 
@@ -37,7 +37,7 @@ export default defineThemeConfig({
    * @see https://theme-plume.vuejs.press/config/basic/#profile
    */
   profile: {
-    avatar: 'Roor.svg',
+    avatar: 'favicon.svg',
     name: 'Roor',
     description: '流于形色，臻于至美',
     // circle: true,

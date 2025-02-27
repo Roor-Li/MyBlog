@@ -5,6 +5,7 @@ import { defineClientConfig } from 'vuepress/client'
 // import Swiper from 'vuepress-theme-plume/features/Swiper.vue'
 
 import CustomComponent from './theme/components/Custom.vue'
+import './styles/index.css'
 
 // import './theme/styles/custom.css'
 

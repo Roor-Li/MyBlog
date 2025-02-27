@@ -1,0 +1,53 @@
+:root {
+  /** 主题颜色 */
+  --vp-c-brand-1: oklch(54.87% 0.222 260.33);
+  --vp-c-brand-2: oklch(62.39% 0.181 258.33);
+  --vp-c-brand-3: oklch(80.17% 0.091 258.88);
+  --vp-c-brand-soft: oklch(89.66% 0.046 260.67 / .3);
+}
+
+[data-theme="dark"] {
+  --vp-c-brand-3: oklch(54.87% 0.222 260.33);
+  --vp-c-brand-2: oklch(62.39% 0.181 258.33);
+  --vp-c-brand-1: oklch(80.17% 0.091 258.88);
+  --vp-c-brand-soft: oklch(89.66% 0.046 260.67 / .3);
+}
+
+/* 文章网格背景 */
+.vp-doc-container {
+  --vp-doc-blog-bg: oklch(62.39% 0.181 258.33 / .1);
+
+  background: 
+    linear-gradient(
+      63.5deg,
+      var(--vp-doc-blog-bg) 2%,
+        transparent 2%,
+        transparent 50%,
+      var(--vp-doc-blog-bg) 50%,
+      var(--vp-doc-blog-bg) 52%,
+      transparent 52%
+    ),
+    linear-gradient(
+      180deg,
+      var(--vp-doc-blog-bg) 2%,
+        transparent 2%,
+        transparent 50%,
+      var(--vp-doc-blog-bg) 50%,
+      var(--vp-doc-blog-bg) 52%,
+      transparent 52%
+    ),
+    linear-gradient(
+      116.5deg,
+      var(--vp-doc-blog-bg) 2%,
+        transparent 2%,
+        transparent 50%,
+      var(--vp-doc-blog-bg) 50%,
+      var(--vp-doc-blog-bg) 52%,
+      transparent 52%
+    );
+  background-size: 2rem 4rem;
+  background-position: 65% 25%;
+}
+[data-theme="dark"] .vp-doc-container {
+  --vp-doc-blog-bg: oklch(70.94% 0.136 258.06 / .1);
+}
