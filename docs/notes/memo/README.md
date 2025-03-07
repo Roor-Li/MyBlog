@@ -4,7 +4,11 @@ createTime: 2025/02/19 16:10:42
 permalink: /notes/
 pageLayout: home
 config:
-  - type: custom
+  - type: doc-hero
+    hero:
+      name: 备忘录
+      tagline: 学习和工作中，所使用的各类 技术 和 工具 备忘录。
+      image: /emojione--memo.svg
   - type: features
     features:
       -

@@ -4,7 +4,7 @@ config:
   -
     type: hero
     full: true
-    background: tint-plate
+    
     hero:
       name: Roor
       tagline: Just Beautiful

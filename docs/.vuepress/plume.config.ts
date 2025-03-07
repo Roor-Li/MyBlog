@@ -40,7 +40,7 @@ export default defineThemeConfig({
     avatar: 'favicon.svg',
     name: 'Roor',
     description: '流于形色，臻于至美',
-    // circle: true,
+    circle: true,
     // location: '',
     // organization: '',
   },
