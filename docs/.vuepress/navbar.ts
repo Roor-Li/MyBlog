@@ -14,4 +14,5 @@ export const navbar = defineNavbarConfig([
     ],
     icon: 'emojione-v1:note-pad'
   },
+  { text: '收藏夹', link: '/notes/favorites/README.md', icon: 'flat-color-icons:folder' },
 ])
