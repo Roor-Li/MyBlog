@@ -1,5 +1,5 @@
 ---
-title: favorites
+title: 收藏夹
 createTime: 2025/03/27 16:50:53
 permalink: /favorites/
 ---
