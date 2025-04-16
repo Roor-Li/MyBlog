@@ -16,7 +16,7 @@ permalink: /favorites/
 
 <CardGrid>
   <LinkCard title="花瓣网" icon="https://huaban.com/favicon.ico" href="https://huaban.com/" description="国内一个素材网站"/>
-  <LinkCard title="PNGFree.ai" icon="https://pngfree.ai/favicon.ico" href="https://pngfree.ai/" description="一些免扣的PNG图片"/>
+  <!-- <LinkCard title="PNGFree.ai" icon="https://pngfree.ai/favicon.ico" href="https://pngfree.ai/" description="一些免扣的PNG图片"/> -->
   <LinkCard title="Resource Boy" icon="https://resourceboy.com/favicon.ico" href="https://resourceboy.com/" description="设计参考资源"/>
 </CardGrid>
 
@@ -49,6 +49,6 @@ permalink: /favorites/
   <LinkCard title="SLEA.AI" icon="https://slea.ai/favicon.ico" href="https://slea.ai/zh-CN" description="AI Logo生成"/>
   <LinkCard title="Raphael AI" icon="https://raphael.app/favicon.ico" href="https://raphael.app/zh" description="AI图像生成"/>
   <LinkCard title="AI工具集" icon="https://ai-bot.cn/wp-content/uploads/2023/07/ai-bot-favicon.png" href="https://ai-bot.cn/" description="收集了国内大量AI工具"/>
-  <LinkCard title="Free-QWQ" icon="https://qwq.aigpu.cn/favicon.ico" href="https://qwq.aigpu.cn/" description="免费QwQ 32B API"/>
+  <LinkCard title="Free-QWQ" icon="https://qwq.aigpu.cn/favicon.svg" href="https://qwq.aigpu.cn/" description="免费QwQ 32B API"/>
     <LinkCard title="DeepPDF" icon="https://cdn.zbaseglobal.com/saasbox/product/icon/c5572685cae739db12ad044b8d48d900.png" href="https://deeppdf.ai/" description="AI分析、翻译PDF"/>
 </CardGrid>
