@@ -18,6 +18,7 @@ permalink: /favorites/
   <LinkCard title="花瓣网" icon="https://huaban.com/favicon.ico" href="https://huaban.com/" description="国内一个素材网站"/>
   <!-- <LinkCard title="PNGFree.ai" icon="https://pngfree.ai/favicon.ico" href="https://pngfree.ai/" description="一些免扣的PNG图片"/> -->
   <LinkCard title="Resource Boy" icon="https://resourceboy.com/favicon.ico" href="https://resourceboy.com/" description="设计参考资源"/>
+  <LinkCard title="ByteByteGo" icon="https://bytebytego.com/favicon-32x32.png" href="https://bytebytego.com/guides/" description="一些系统结构图的示例"/>
 </CardGrid>
 
 ## 配色相关
@@ -41,6 +42,7 @@ permalink: /favorites/
   <LinkCard title="fontawesome" icon="https://fontawesome.com/favicon.ico" href="https://fontawesome.com/" description="主打简约风格的图标"/>
   <LinkCard title="Developer Icons" icon="https://xandemon.github.io/developer-icons/favicon.svg" href="https://xandemon.github.io/developer-icons/" description="开发者图标库，收集了各种开发工具的图标"/>
   <LinkCard title="RealFaviconGenerator" icon="https://realfavicongenerator.net/favicon.ico" href="https://realfavicongenerator.net/" description="将图片转换成Favicon"/>
+  <LinkCard title="svgl" icon="https://svgl.app/images/logo.svg" href="https://svgl.app/" description="一个常用徽标 Logo 的搜索引擎"/>
 </CardGrid>
 
 ## AI工具
@@ -51,4 +53,10 @@ permalink: /favorites/
   <LinkCard title="AI工具集" icon="https://ai-bot.cn/wp-content/uploads/2023/07/ai-bot-favicon.png" href="https://ai-bot.cn/" description="收集了国内大量AI工具"/>
   <LinkCard title="Free-QWQ" icon="https://qwq.aigpu.cn/favicon.svg" href="https://qwq.aigpu.cn/" description="免费QwQ 32B API"/>
     <LinkCard title="DeepPDF" icon="https://cdn.zbaseglobal.com/saasbox/product/icon/c5572685cae739db12ad044b8d48d900.png" href="https://deeppdf.ai/" description="AI分析、翻译PDF"/>
+</CardGrid>
+
+## 开发工具
+<CardGrid>
+  <LinkCard title="Firebase Studio" icon="https://firebase.studio/favicon.ico" href="https://firebase.studio/" description="Google推出的云端全栈开发环境"/>
+
 </CardGrid>
