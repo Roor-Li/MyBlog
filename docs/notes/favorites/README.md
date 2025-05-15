@@ -52,7 +52,7 @@ permalink: /favorites/
   <LinkCard title="Raphael AI" icon="https://raphael.app/favicon.ico" href="https://raphael.app/zh" description="AI图像生成"/>
   <LinkCard title="AI工具集" icon="https://ai-bot.cn/wp-content/uploads/2023/07/ai-bot-favicon.png" href="https://ai-bot.cn/" description="收集了国内大量AI工具"/>
   <LinkCard title="Free-QWQ" icon="https://qwq.aigpu.cn/favicon.svg" href="https://qwq.aigpu.cn/" description="免费QwQ 32B API"/>
-    <LinkCard title="DeepPDF" icon="https://cdn.zbaseglobal.com/saasbox/product/icon/c5572685cae739db12ad044b8d48d900.png" href="https://deeppdf.ai/" description="AI分析、翻译PDF"/>
+  <LinkCard title="DeepPDF" icon="https://cdn.zbaseglobal.com/saasbox/product/icon/c5572685cae739db12ad044b8d48d900.png" href="https://deeppdf.ai/" description="AI分析、翻译PDF"/>
 </CardGrid>
 
 ## 开发工具
