@@ -6,7 +6,7 @@ permalink: /memo/86dix4kw/
 
 ## build
 
-```sh
+```bash
 docker buildx build [OPTIONS] PATH | URL | - 
 ```
 
@@ -23,7 +23,7 @@ docker buildx build [OPTIONS] PATH | URL | -
 
 ## run
 
-```sh
+```bash
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 ```
 
@@ -34,3 +34,18 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 - -d：后台运行容器
 - -it：交互式运行容器
 - -p：端口映射，格式为 ==host_port:container_port== 
+
+## 进入容器
+
+```bash
+docker exec -it [容器名/容器ID] /bin/bash
+```
+
+## 退出容器
+
+```bash
+exit # 直接退出（没有-d参数会关闭容器）
+
+Ctrl + p + q # 退出但不会关闭容器
+```
+

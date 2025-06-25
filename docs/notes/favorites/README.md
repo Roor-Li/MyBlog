@@ -43,6 +43,8 @@ permalink: /favorites/
   <LinkCard title="Developer Icons" icon="https://xandemon.github.io/developer-icons/favicon.svg" href="https://xandemon.github.io/developer-icons/" description="开发者图标库，收集了各种开发工具的图标"/>
   <LinkCard title="RealFaviconGenerator" icon="https://realfavicongenerator.net/favicon.ico" href="https://realfavicongenerator.net/" description="将图片转换成Favicon"/>
   <LinkCard title="svgl" icon="https://svgl.app/images/logo.svg" href="https://svgl.app/" description="一个常用徽标 Logo 的搜索引擎"/>
+  <LinkCard title="Thiings" icon="https://www.thiings.co/favicon.png" href="https://www.thiings.co/things" description="大量3D图标"/>
+
 </CardGrid>
 
 ## AI工具
